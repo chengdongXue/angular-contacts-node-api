@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "email": "edmond_k_leung@cathaypacific.com",
+      "password": "e807f1fcf82d132f9bb018ca6738a19f",
+      "id": 1
+    },
+    {
+      "email": "jackchenglove163@163.com",
+      "password": "e807f1fcf82d132f9bb018ca6738a19f",
+      "id": 2
+    },
+    {
+      "email": "chengdong.xue@accenture.com",
+      "password": "e807f1fcf82d132f9bb018ca6738a19f",
+      "id": 3
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "title": "朋友"
+    },
+    {
+      "id": 2,
+      "title": "家人"
+    },
+    {
+      "id": 3,
+      "title": "同学"
+    },
+    {
+      "id": 4,
+      "title": "公司"
+    }
+  ],
+  "contacts": [
+    {
+      "email": "qwertyuiop@63.com",
+      "phone": 18625274451,
+      "name": "鸟的关键是工商局该死的",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "email": "edmond_k_leung@cathaypacific.com",
+      "phone": 18625279963,
+      "name": "感觉上课给我个几十个能看到的",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "email": "chengdong.xue@accenture.com",
+      "phone": 18625278956,
+      "name": "私は薛です、中国の人です",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "email": "jackchenglove163@163.com",
+      "phone": 1862527854,
+      "name": "sfsfsdfsdgdsgdsgsd",
+      "userId": 2,
+      "id": 4
+    }
+  ]
+}
