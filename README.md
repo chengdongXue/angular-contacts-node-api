@@ -1,4 +1,4 @@
-# 通讯录案例接口说明文档
+# please remember to perform npm install command and execute node api.js on cmd
 
 ## 接口说明
 
@@ -119,3 +119,125 @@
 
 - 请求方法：`DELETE`
 - 请求路径：`/contacts/:id`
+
+#The address book case interface documentation
+
+##Interface Description
+
+- Interface address: http://localhost:3000
+- Interface turned on CORS
+- Interface authentication unified use of Token authentication (based on JSON Web Token)
+- Interfaces that need authorization must provide request header field X-Access-Token information
+- Identity status with HTTP Status Code
+- Paging list parameters using _page and _limit
+- Time Date Format: 2017-12-24 13:52:26
+- Data return format unified use JSON
+- No special instructions, interface default support application/x-www-form-urlencoded and application/json two ways
+
+General return status code description
+
+| Status Code . . .                 What it means                 Description . . .
+|--------|--------------------------------------|--------------------------------------|
+|    200 . . . OK . . . The request was successful.
+|    201 . . . CREATED . . . Successful creation . . .
+|    204 . . . DELETEDED . . . Successful deletion
+|    400 . . . BAD REQUEST . . . The requested address does not exist or contains unsupported parameters . . .
+|    401 . . . D'DD. Unauthorized . . .
+|    403 . . . FORBIDDEN . . . Prohibited Access . . .
+|    404 . . . NOT FOUND . . . The requested resource does not exist.
+|    422 . . . Unprocesable entity (POST/PUT/PATCH) When an object is created, a validation error occurs.
+|    500 . . . INTERNAL SERVER ERROR Internal errors on the server . . .
+
+Return results description
+
+- GET /collection: returns a list of resource objects (array)
+- GET /collection/resource: Returns a single resource object
+- POST /collection: returns newly generated resource objects
+- PUT/collection/resource: Returns full resource object
+- PATCH /collection/resource: Returns full resource object
+- DELETE /collection/resource: Returns an empty document
+
+Universal error return results
+
+HTTP Status Code is 4xx error when an error occurs, such as 400,403,404
+
+Wrong format:
+
+'Json'
+{
+  error: 'username invalid'
+}
+```
+
+User module
+
+User registration
+
+- POST
+- '/users'
+
+|   Parameters . . . Whether it is necessary to     Description . . .
+|----------|----------|--------------|
+| email . . . Yes, it's a Email, username . . .
+| password . . . Yes, it's a Passwords . . .
+
+User login
+
+- Request method: POST
+- Request path: '/session'
+
+|   Parameters . . . Whether it is necessary to     Description . . .
+|----------|----------|--------------|
+| email . . . Yes, it's a Email, username . . .
+| password . . . Yes, it's a Passwords . . .
+
+User exit
+
+- Request method: DELETE
+- Request path: '/session'
+
+Contact Category
+
+Get a list of categories
+
+- Request method: 'GET'
+- Request path: '/tags'
+
+New category
+
+- Request method: 'POST'
+- Request path: '/tags'
+
+Edit edit edited category
+
+- Request method: 'POST'
+- Request path: '/tags/:id'
+
+Delete the category
+
+- Request method: 'DELETE'
+- Request path: '/tags/:id'
+
+---
+
+Contacts
+
+Contact list
+
+- Request method: 'GET'
+- Request path: '/contacts'
+
+New Contacts
+
+- Request method: 'POST'
+- Request path: '/contacts'
+
+Edit contact
+
+- Request method: 'PATCH'
+- Request path: '/contacts/:id'
+
+Delete contacts
+
+- Request method: 'DELETE'
+- Request path: '/contacts/:id'
